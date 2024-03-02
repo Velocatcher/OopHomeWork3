@@ -34,12 +34,15 @@ public class Main {
         medicineList.add(medicine2);
         medicineList.add(medicine3);
 
+        System.out.println("Неотсортированный массив");
         System.out.println(medicineList);
         System.out.println();
+        System.out.println("Отсортированный массив");
         Collections.sort(medicineList);
         System.out.println(medicineList);
         System.out.println();
         medicineList.sort(Comparator.reverseOrder());
+        System.out.println("Отсортированный по убыванию массив");
         System.out.println(medicineList);
 
 //
