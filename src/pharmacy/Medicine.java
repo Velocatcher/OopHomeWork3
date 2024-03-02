@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Medicine implements Iterator<MedicineComponent>, Comparable<Medicine> {
-    private List<MedicineComponent> components;
+    List<MedicineComponent> components;
     private int index;
 
     public Medicine() {
@@ -38,6 +38,17 @@ public class Medicine implements Iterator<MedicineComponent>, Comparable<Medicin
 
     @Override
     public int compareTo(Medicine o) {
-        return components.size() - o.components.size();
+        int powerComponents1 = 0;
+        int powerComponents2 = 0;
+        for(MedicineComponent component : this.components) {
+            powerComponents1 += (int) component.getPower();
+        }
+        for(MedicineComponent component : o.components) {
+            powerComponents2 += (int) component.getPower();
+        }
+
+        return Integer.compare(powerComponents2, powerComponents1);
+
+//        return components.size() - o.components.size();
     }
 }

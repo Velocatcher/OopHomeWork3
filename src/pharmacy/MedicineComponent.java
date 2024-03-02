@@ -26,13 +26,16 @@ public abstract class MedicineComponent implements Comparable<MedicineComponent>
     public float getWeight() {
         return weight;
     }
-
+    public float getPower() {
+        return power;
+    }
     @Override
     public String toString() {
-        return "MedicineComponent{" +
-                "name='" + name + '\'' +
-                ", weight=" + weight +
-                ", power=" + power +
-                '}';
+        return  name +", power=" + power;
+//        return "MedicineComponent {" +
+//                "name='" + name + '\'' +
+//                ", weight=" + weight +
+//                ", power=" + power +
+//                '}';
     }
 }

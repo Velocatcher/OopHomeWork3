@@ -14,7 +14,7 @@ public class Main {
         ArrayList<MedicineComponent> medList = new ArrayList<>();
         Asitromin asitr = new Asitromin("Asitro", 50, 25);
         Penicilinium penicilinium = new Penicilinium("Penicil", 30, 50);
-        Vetbicid vetbic = new Vetbicid("Vetbic", 40, 30);
+        Vetbicid vetbic = new Vetbicid("Vetbic", 40, 1000);
 
         medList.add(asitr);
         medList.add(penicilinium);
@@ -22,7 +22,7 @@ public class Main {
 
         ArrayList<Medicine> medicineList = new ArrayList<>();
         Medicine medicine1 = new Medicine();
-        medicine1.addComponent(asitr).addComponent(vetbic);
+        medicine1.addComponent(asitr).addComponent(penicilinium);
 
         Medicine medicine2 = new Medicine();
         medicine2.addComponent(vetbic);
@@ -35,13 +35,14 @@ public class Main {
         medicineList.add(medicine3);
 
         System.out.println(medicineList);
-
+        System.out.println();
         Collections.sort(medicineList);
         System.out.println(medicineList);
-
+        System.out.println();
         medicineList.sort(Comparator.reverseOrder());
         System.out.println(medicineList);
 
+//
 //        for (MedicineComponent companent : medicine1) {
 //
 //        }
@@ -52,9 +53,9 @@ public class Main {
 //        for (MedicineComponent component : medicine1) {
 //            System.out.println(component);
 //        }
-        medList.add(asitr);
-        medList.add(penicilinium);
-        medList.add(vetbic);
+//        medList.add(asitr);
+//        medList.add(penicilinium);
+//        medList.add(vetbic);
 //        System.out.println(medList);
 //        Collections.sort(medList, (o1, o2) -> 0);
 //        System.out.println(medList);
